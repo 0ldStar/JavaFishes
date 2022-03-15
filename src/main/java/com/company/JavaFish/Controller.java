@@ -4,6 +4,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -15,37 +16,40 @@ public class Controller {
 
     @FXML
     private URL location;
+
+    @FXML
+    private Label label;
+
     @FXML
     private AnchorPane pane;
 
     @FXML
     void keyPressed(KeyEvent event) {
-        System.out.println("ABOBA");
 
     }
 
     @FXML
     void keyReleased(KeyEvent event) {
-        System.out.println("ABOBA");
 
     }
 
     @FXML
     void keyTyped(KeyEvent event) {
-        System.out.println("ABOBA");
 
     }
 
     @FXML
     void mouseClick(MouseEvent event) {
-        System.out.println("ABEBA");
 
+    }
+
+    public void printLabel(String str) {
+        label.setText(str);
     }
 
     @FXML
     void initialize() {
-        assert pane != null : "fx:id=\"pane\" was not injected: check your FXML file 'hello-view.fxml'.";
-
+        assert label != null : "fx:id=\"label\" was not injected: check your FXML file 'hello-view.fxml'.";
     }
 
 }
